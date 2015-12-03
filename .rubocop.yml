@@ -1,0 +1,35 @@
+AllCops:
+  RunRailsCops: true
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Style/GuardClause:
+  MinBodyLength: 3
+
+Style/TrivialAccessors:
+  AllowPredicates: true
+
+Style/IfUnlessModifier:
+  MaxLineLength: 30
+
+Metrics/AbcSize:
+  Severity: refactor
+
+Metrics/PerceivedComplexity:
+  Severity: refactor
+
+Metrics/ParameterLists:
+  Severity: refactor
+
+Metrics/MethodLength:
+  Severity: refactor
+
+Metrics/CyclomaticComplexity:
+  Severity: refactor
