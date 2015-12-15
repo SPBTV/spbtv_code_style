@@ -6,6 +6,12 @@ Style/AsciiComments:
 
 Style/ModuleFunction:
   Enabled: false
+  
+Style/Next:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
 
 Metrics/LineLength:
   Max: 120
