@@ -16,9 +16,6 @@ Style/GuardClause:
 Metrics/LineLength:
   Max: 120
 
-Style/GuardClause:
-  MinBodyLength: 3
-
 Style/TrivialAccessors:
   AllowPredicates: true
 
