@@ -1,12 +1,16 @@
 AllCops:
   RunRailsCops: true
 
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: single_quotes
+
 Style/AsciiComments:
   Enabled: false
 
 Style/ModuleFunction:
   Enabled: false
-  
+
 Style/Next:
   Enabled: false
 
