@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SPBTV/spbtv_code_style.svg)](https://travis-ci.org/SPBTV/spbtv_code_style)
+
 # SpbtvCodeStyle
 
 This gem contains common `.rubocop.yml` file to simplify maintaining the same code style in various SpbTV projects.
