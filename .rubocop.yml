@@ -43,3 +43,6 @@ Metrics/CyclomaticComplexity:
 
 Style/SignalException:
   EnforcedStyle: semantic
+  
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented  
