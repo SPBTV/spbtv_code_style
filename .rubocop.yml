@@ -41,6 +41,9 @@ Metrics/MethodLength:
 Metrics/CyclomaticComplexity:
   Severity: refactor
 
+Metrics/ModuleLength:
+  Severity: refactor
+
 Style/SignalException:
   EnforcedStyle: semantic
   
