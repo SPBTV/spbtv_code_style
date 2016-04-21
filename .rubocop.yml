@@ -46,3 +46,7 @@ Style/SignalException:
   
 Style/MultilineMethodCallIndentation:
   EnforcedStyle: indented  
+  
+Style/IndentArray:
+  EnforcedStyle: consistent
+
