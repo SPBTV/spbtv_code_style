@@ -53,3 +53,5 @@ Style/IndentArray:
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
+Style/ClosingParenthesisIndentation:
+  Enabled: false
