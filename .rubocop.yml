@@ -43,10 +43,13 @@ Metrics/CyclomaticComplexity:
 
 Style/SignalException:
   EnforcedStyle: semantic
-  
+
 Style/MultilineMethodCallIndentation:
-  EnforcedStyle: indented  
-  
+  EnforcedStyle: indented
+
 Style/IndentArray:
   EnforcedStyle: consistent
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
 
