@@ -1,0 +1,17 @@
+inherit_from:
+  - .rubocop.yml
+
+Metrics/AbcSize:
+  Severity: warning
+
+Metrics/PerceivedComplexity:
+  Severity: warning
+
+Metrics/ParameterLists:
+  Severity: warning
+
+Metrics/MethodLength:
+  Severity: warning
+
+Metrics/CyclomaticComplexity:
+  Severity: warning
