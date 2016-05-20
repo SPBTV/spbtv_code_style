@@ -26,6 +26,9 @@ Style/TrivialAccessors:
 Style/IfUnlessModifier:
   MaxLineLength: 30
 
+Style/EmptyCaseCondition:
+  Enabled: false
+
 Metrics/AbcSize:
   Severity: refactor
 
@@ -43,10 +46,10 @@ Metrics/CyclomaticComplexity:
 
 Style/SignalException:
   EnforcedStyle: semantic
-  
+
 Style/MultilineMethodCallIndentation:
-  EnforcedStyle: indented  
-  
+  EnforcedStyle: indented
+
 Style/IndentArray:
   EnforcedStyle: consistent
 
