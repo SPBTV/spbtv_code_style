@@ -53,3 +53,14 @@ Style/MultilineMethodCallIndentation:
 Style/IndentArray:
   EnforcedStyle: consistent
 
+Style/MultilineMethodCallBraceLayout:
+  EnforcedStyle: same_line
+
+Style/ClosingParenthesisIndentation:
+  Enabled: false
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: no_comma
