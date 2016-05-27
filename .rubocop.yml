@@ -1,6 +1,18 @@
 Rails:
  Enabled: true
 
+AllCops:
+  Exclude:
+    - '**/schema.rb'
+    - '**/db/**/*'
+    - '**/docs/**/*'
+    - '**/tmp/**/*'
+    - '**/vendor/**/*'
+
+Style/Documentation:
+  Exclude:
+    - '**/spec/**/*'
+
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: single_quotes
