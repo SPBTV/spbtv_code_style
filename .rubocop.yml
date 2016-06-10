@@ -1,6 +1,3 @@
-Rails:
- Enabled: true
-
 AllCops:
   Exclude:
     - '**/schema.rb'
