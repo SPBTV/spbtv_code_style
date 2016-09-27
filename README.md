@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/SPBTV/spbtv_code_style.svg)](https://travis-ci.org/SPBTV/spbtv_code_style)
+[![Gem Version](https://badge.fury.io/rb/spbtv_code_style.svg)](https://badge.fury.io/rb/spbtv_code_style)
 
 # SpbtvCodeStyle
 
