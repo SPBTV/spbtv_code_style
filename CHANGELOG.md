@@ -1,3 +1,7 @@
+**1.5.0**:
+  
+  * Do not depend on particular rubocop version. Thus, you are enforced to specify version explicitly.
+  
 **1.4.1**:
 
   * Do not require documentation for classed defined in spec files.
