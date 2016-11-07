@@ -17,11 +17,11 @@ module RuboCop
         #   Model.each_instance { |instance| instance.do_something }
         #
         class FindEach < Cop
-          MSG = 'Do not use find_each, as the keys are non-integer. Use each_instance instead.'.freeze
+          MSG = 'Do not use find_each or find_in_batches, as the keys are non-integer.'.freeze
 
           def on_send(node)
             _, method, * = *node
-            if method == :find_each
+            if method == :find_each || method == :find_in_batches
               add_offense(node, :selector, MSG)
             end
           end
