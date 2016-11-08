@@ -4,6 +4,7 @@ require:
   - ./lib/rubocop/cop/spbtv/postgres/add_column_with_not_null
   - ./lib/rubocop/cop/spbtv/postgres/add_index
   - ./lib/rubocop/cop/spbtv/postgres/change_column
+  - ./lib/rubocop/cop/spbtv/postgres/find_each
   - ./lib/rubocop/cop/spbtv/multiple_validation
 
 Rails:
