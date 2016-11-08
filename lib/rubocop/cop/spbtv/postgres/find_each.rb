@@ -7,7 +7,7 @@ module RuboCop
         # Do not use find_each with Postgresql.
         #
         # ActiveRecord's find_each and find_in_batches ignore non-integer primary keys,
-        # thus limiting output to 1000 records.
+        # so correct execution is not guaranteed in case of joining tables.
         # Workaround: use https://github.com/afair/postgresql_cursor gem with its each_instance method.
         #
         # @example
