@@ -3,6 +3,8 @@ inherit_from:
 
 Metrics/AbcSize:
   Severity: warning
+  Exclude:
+    - '**/db/**/*'
 
 Metrics/PerceivedComplexity:
   Severity: warning
@@ -12,6 +14,8 @@ Metrics/ParameterLists:
 
 Metrics/MethodLength:
   Severity: warning
+  Exclude:
+    - '**/db/**/*'
 
 Metrics/CyclomaticComplexity:
   Severity: warning

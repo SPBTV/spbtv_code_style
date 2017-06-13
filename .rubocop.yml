@@ -1,3 +1,14 @@
+require:
+  - ./lib/rubocop/cop/spbtv/postgres/add_column_with_default
+  - ./lib/rubocop/cop/spbtv/postgres/add_column_with_not_null
+  - ./lib/rubocop/cop/spbtv/postgres/add_index
+  - ./lib/rubocop/cop/spbtv/postgres/change_column
+  - ./lib/rubocop/cop/spbtv/postgres/find_each
+  - ./lib/rubocop/cop/spbtv/multiple_validation
+
+Rails:
+ Enabled: true
+
 AllCops:
   Exclude:
     - '**/schema.rb'
@@ -26,9 +37,6 @@ Style/Next:
 Style/GuardClause:
   Enabled: false
 
-Metrics/LineLength:
-  Max: 120
-
 Style/TrivialAccessors:
   AllowPredicates: true
 
@@ -37,6 +45,11 @@ Style/IfUnlessModifier:
 
 Style/EmptyCaseCondition:
   Enabled: false
+
+Metrics/ClassLength:
+  Severity: refactor
+  Exclude:
+    - '**/db/**/*'
 
 Metrics/AbcSize:
   Severity: refactor
@@ -47,8 +60,18 @@ Metrics/PerceivedComplexity:
 Metrics/ParameterLists:
   Severity: refactor
 
+Metrics/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Severity: refactor
+  Exclude:
+    - '**/db/**/*'
+
 Metrics/MethodLength:
   Severity: refactor
+  Exclude:
+    - '**/db/**/*'
 
 Metrics/CyclomaticComplexity:
   Severity: refactor
@@ -79,3 +102,33 @@ Style/FirstMethodArgumentLineBreak:
 
 Style/FirstMethodParameterLineBreak:
   Enabled: true
+
+Postgres/AddColumnWithDefault:
+  Exclude:
+    - '**/db/migrate/2015*'
+    - '**/db/migrate/20160*'
+    - '**/db/migrate/201610*'
+
+Postgres/AddColumnWithNotNull:
+  Exclude:
+    - '**/db/migrate/2015*'
+    - '**/db/migrate/20160*'
+    - '**/db/migrate/201610*'
+
+Postgres/AddIndex:
+  Exclude:
+    - '**/db/migrate/2015*'
+    - '**/db/migrate/20160*'
+    - '**/db/migrate/201610*'
+
+Postgres/ChangeColumn:
+  Exclude:
+    - '**/db/migrate/2015*'
+    - '**/db/migrate/20160*'
+    - '**/db/migrate/201610*'
+
+Rails/NotNullColumn:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 3
