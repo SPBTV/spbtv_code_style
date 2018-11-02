@@ -18,9 +18,7 @@ module RuboCop
 
         def on_send(node)
           _, _, *args = *node
-          if node.command?(:validates) && args.length > 2
-            add_offense(node, :selector, MSG)
-          end
+          add_offense(node, :selector, MSG) if node.command?(:validates) && args.length > 2
         end
 
         private

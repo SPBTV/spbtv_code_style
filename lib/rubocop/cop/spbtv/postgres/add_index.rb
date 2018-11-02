@@ -71,9 +71,7 @@ module RuboCop
               add_offense(node, :expression)
             elsif (options = add_index_with_options?(node))
               has_concurrently = options.detect { |pair| concurrently?(pair) }
-              unless has_concurrently && @disable_ddl_transaction
-                add_offense(node, :expression)
-              end
+              add_offense(node, :expression) unless has_concurrently && @disable_ddl_transaction
             end
           end
         end

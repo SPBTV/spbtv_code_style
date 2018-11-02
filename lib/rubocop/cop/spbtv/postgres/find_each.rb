@@ -21,9 +21,7 @@ module RuboCop
 
           def on_send(node)
             _, method, * = *node
-            if method == :find_each || method == :find_in_batches
-              add_offense(node, :selector, MSG)
-            end
+            add_offense(node, :selector, MSG) if %i[find_each find_in_batches].include?(method)
           end
         end
       end

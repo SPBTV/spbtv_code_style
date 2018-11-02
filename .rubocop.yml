@@ -40,19 +40,16 @@ Style/GuardClause:
 Style/TrivialAccessors:
   AllowPredicates: true
 
-Style/IfUnlessModifier:
-  MaxLineLength: 30
-
 Style/EmptyCaseCondition:
   Enabled: false
+
+Metrics/BlockLength:
+ ExcludedMethods: ['describe', 'context']
 
 Metrics/ClassLength:
   Severity: refactor
   Exclude:
     - '**/db/**/*'
-
-Metrics/AbcSize:
-  Severity: refactor
 
 Metrics/PerceivedComplexity:
   Severity: refactor
@@ -79,20 +76,23 @@ Metrics/CyclomaticComplexity:
 Style/SignalException:
   EnforcedStyle: semantic
 
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
-Style/IndentArray:
+Layout/IndentArray:
   EnforcedStyle: consistent
 
-Style/MultilineMethodCallBraceLayout:
+Layout/MultilineMethodCallBraceLayout:
   Enabled: false
 
-Style/ClosingParenthesisIndentation:
+Layout/ClosingParenthesisIndentation:
   Enabled: false
 
-Style/TrailingCommaInLiteral:
-  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArrayLiteral:
+ EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+ EnforcedStyleForMultiline: comma
 
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma

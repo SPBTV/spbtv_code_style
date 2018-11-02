@@ -23,9 +23,7 @@ module RuboCop
 
           def on_send(node)
             _, _, * = *node
-            if node.command?(:change_column)
-              add_offense(node, :selector, MSG)
-            end
+            add_offense(node, :selector, MSG) if node.command?(:change_column)
           end
         end
       end

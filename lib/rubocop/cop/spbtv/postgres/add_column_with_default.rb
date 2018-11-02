@@ -40,6 +40,7 @@ module RuboCop
           def on_send(node)
             pairs = add_column_with_default?(node)
             return unless pairs
+
             has_default = pairs.detect { |pair| has_default?(pair) }
 
             return unless has_default
