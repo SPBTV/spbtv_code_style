@@ -1,4 +1,5 @@
 require:
+  - rubocop-rspec
   - ./lib/rubocop/cop/spbtv/postgres/add_column_with_default
   - ./lib/rubocop/cop/spbtv/postgres/add_column_with_not_null
   - ./lib/rubocop/cop/spbtv/postgres/add_index
