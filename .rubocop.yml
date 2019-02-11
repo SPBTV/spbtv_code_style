@@ -40,14 +40,12 @@ Style/GuardClause:
 Style/TrivialAccessors:
   AllowPredicates: true
 
-Style/IfUnlessModifier:
-  MaxLineLength: 30
-
 Style/EmptyCaseCondition:
   Enabled: false
 
 Metrics/ClassLength:
   Severity: refactor
+  Max: 140
   Exclude:
     - '**/db/**/*'
 
@@ -70,6 +68,7 @@ Metrics/AbcSize:
 
 Metrics/MethodLength:
   Severity: refactor
+  Max: 15
   Exclude:
     - '**/db/**/*'
 
@@ -79,19 +78,22 @@ Metrics/CyclomaticComplexity:
 Style/SignalException:
   EnforcedStyle: semantic
 
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
-Style/IndentArray:
+Layout/IndentArray:
   EnforcedStyle: consistent
 
-Style/MultilineMethodCallBraceLayout:
+Layout/MultilineMethodCallBraceLayout:
   Enabled: false
 
-Style/ClosingParenthesisIndentation:
+Layout/ClosingParenthesisIndentation:
   Enabled: false
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
 Style/TrailingCommaInArguments:
@@ -123,6 +125,3 @@ Postgres/ChangeColumn:
 
 Rails/NotNullColumn:
   Enabled: false
-
-RSpec/MultipleExpectations:
-  Max: 3

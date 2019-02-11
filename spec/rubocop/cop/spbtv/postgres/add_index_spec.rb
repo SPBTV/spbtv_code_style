@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-RSpec.describe RuboCop::Cop::Spbtv::Postgres::AddIndex do
+RSpec.describe RuboCop::Cop::Spbtv::Postgres::AddIndex do # rubocop:disable Metrics/BlockLength
   subject(:cop) { described_class.new }
+
   let(:msg) { 'Do not add an index.' }
 
-  before do
-    inspect_source(cop, source)
-  end
+  before { inspect_source(source) }
 
   context 'concurrently without disable_ddl_transaction!' do
     let(:source) do
