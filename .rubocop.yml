@@ -49,9 +49,6 @@ Metrics/ClassLength:
   Exclude:
     - '**/db/**/*'
 
-Metrics/AbcSize:
-  Severity: refactor
-
 Metrics/PerceivedComplexity:
   Severity: refactor
 
@@ -81,7 +78,7 @@ Style/SignalException:
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
-Layout/IndentArray:
+Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
 
 Layout/MultilineMethodCallBraceLayout:

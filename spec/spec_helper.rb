@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubocop/spbtv'
 require 'rubocop/rspec/support'
 require 'rubocop/rspec/cop_helper'

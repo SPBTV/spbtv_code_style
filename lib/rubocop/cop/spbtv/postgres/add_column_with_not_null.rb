@@ -20,7 +20,7 @@ module RuboCop
         #   add_column :users, :name, :string
         #
         class AddColumnWithNotNull < Cop
-          MSG = 'Do not add a NOT NULL column.'.freeze
+          MSG = 'Do not add a NOT NULL column.'
 
           def_node_matcher :add_not_null_column?, <<-PATTERN
             (send _ :add_column _ _ _ (hash $...))

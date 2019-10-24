@@ -19,7 +19,7 @@ module RuboCop
         #   change_column :suppliers, :name, :string, limit: 80
         #
         class ChangeColumn < Cop
-          MSG = 'Do not change column.'.freeze
+          MSG = 'Do not change column.'
 
           def on_send(node)
             _, _, * = *node

@@ -16,7 +16,7 @@ module RuboCop
       class MultipleValidation < Cop
         include RuboCop::Cop::AutocorrectLogic
 
-        MSG = 'Prefer validating one attribute at once.'.freeze
+        MSG = 'Prefer validating one attribute at once.'
 
         def on_send(node)
           _, _, *args = *node

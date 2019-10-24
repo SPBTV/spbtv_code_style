@@ -17,7 +17,7 @@ module RuboCop
         #   Model.each_instance { |instance| instance.do_something }
         #
         class FindEach < Cop
-          MSG = 'Do not use find_each or find_in_batches, as the keys are non-integer.'.freeze
+          MSG = 'Do not use find_each or find_in_batches, as the keys are non-integer.'
 
           def on_send(node)
             _, method, * = *node

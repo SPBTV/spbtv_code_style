@@ -46,7 +46,7 @@ module RuboCop
         #   end
         #
         class AddIndex < Cop
-          MSG = 'Do not add an index.'.freeze
+          MSG = 'Do not add an index.'
 
           def_node_search :disable_ddl_transaction?, '(send _ :disable_ddl_transaction!)'
 

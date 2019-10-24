@@ -27,7 +27,7 @@ module RuboCop
         #   end
         #
         class AddColumnWithDefault < Cop
-          MSG = 'Do not add a column with a default value.'.freeze
+          MSG = 'Do not add a column with a default value.'
 
           def_node_matcher :add_column_with_default?, <<-PATTERN
             (send _ :add_column _ _ _ (hash $...))
