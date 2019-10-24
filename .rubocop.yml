@@ -6,8 +6,8 @@ require:
   - ./lib/rubocop/cop/spbtv/postgres/find_each
   - ./lib/rubocop/cop/spbtv/multiple_validation
 
-Rails:
- Enabled: true
+# Rails:
+#  Enabled: true
 
 AllCops:
   Exclude:
@@ -120,5 +120,5 @@ Postgres/ChangeColumn:
     - '**/db/migrate/20160*'
     - '**/db/migrate/201610*'
 
-Rails/NotNullColumn:
-  Enabled: false
+# Rails/NotNullColumn:
+#   Enabled: false
