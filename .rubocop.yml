@@ -58,7 +58,7 @@ Metrics/ParameterLists:
 Layout/LineLength:
   Max: 120
 
-Layout/AbcSize:
+Metrics/AbcSize:
   Severity: refactor
   Exclude:
     - '**/db/**/*'
