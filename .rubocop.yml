@@ -78,7 +78,7 @@ Style/SignalException:
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
 Layout/MultilineMethodCallBraceLayout:
