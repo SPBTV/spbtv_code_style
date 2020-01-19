@@ -2,9 +2,8 @@
 
 RSpec.describe RuboCop::Cop::Spbtv::Postgres::AddColumnWithNotNull do
   subject(:cop) { described_class.new }
-  before do
-    inspect_source(cop, source)
-  end
+
+  before { inspect_source(source) }
 
   context 'with null: false' do
     let(:msg) { 'Do not add a NOT NULL column.' }

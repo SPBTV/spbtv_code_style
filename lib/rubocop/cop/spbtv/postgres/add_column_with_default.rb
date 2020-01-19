@@ -27,10 +27,10 @@ module RuboCop
         #   end
         #
         class AddColumnWithDefault < Cop
-          MSG = 'Do not add a column with a default value.'.freeze
+          MSG = 'Do not add a column with a default value.'
 
           def_node_matcher :add_column_with_default?, <<-PATTERN
-            (send nil :add_column _ _ _ (hash $...))
+            (send _ :add_column _ _ _ (hash $...))
           PATTERN
 
           def_node_matcher :has_default?, <<-PATTERN
@@ -40,11 +40,12 @@ module RuboCop
           def on_send(node)
             pairs = add_column_with_default?(node)
             return unless pairs
+
             has_default = pairs.detect { |pair| has_default?(pair) }
 
             return unless has_default
 
-            add_offense(has_default, :expression)
+            add_offense(has_default, location: :expression)
           end
         end
       end

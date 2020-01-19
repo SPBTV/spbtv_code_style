@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-RSpec.describe RuboCop::Cop::Spbtv::Postgres::FindEach do
+RSpec.describe RuboCop::Cop::Spbtv::Postgres::FindEach do # rubocop:disable Metrics/BlockLength
   subject(:cop) { described_class.new }
 
-  before do
-    inspect_source(cop, source)
-  end
+  before { inspect_source(source) }
 
   let(:msg) do
     'Do not use find_each or find_in_batches, as the keys are non-integer.'

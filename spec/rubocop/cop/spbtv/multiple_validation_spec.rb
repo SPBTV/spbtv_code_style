@@ -3,18 +3,27 @@
 RSpec.describe RuboCop::Cop::Spbtv::MultipleValidation do
   subject(:cop) { described_class.new }
 
-  it 'accepts single attribute validations' do
-    inspect_source(cop, 'validates :name')
-    expect(cop.offenses).to be_empty
+  before { inspect_source(source) }
+
+  describe 'accepts single attribute validations' do
+    let(:source) { 'validates :name' }
+
+    it { expect_no_offenses(source) }
   end
 
-  it 'accepts single attribute validations with options' do
-    inspect_source(cop, 'validates :name, presence: true')
-    expect(cop.offenses).to be_empty
+  describe 'accepts single attribute validations with options' do
+    let(:source) { 'validates :name, presence: true' }
+
+    it { expect_no_offenses('validates :name, presence: true') }
   end
 
-  it 'autocorrect multiple attributes validation' do
-    new_source = autocorrect_source(cop, 'validates :name, :age, presence: true')
-    expect(new_source).to eq("validates :age, presence: true\nvalidates :name, presence: true")
+  describe 'autocorrect multiple attributes validation' do
+    let(:source) { 'validates :name, :age, presence: true' }
+    let(:correction) { "validates :age, presence: true\nvalidates :name, presence: true" }
+
+    specify do
+      new_source = autocorrect_source(source)
+      expect(new_source).to eq(correction)
+    end
   end
 end

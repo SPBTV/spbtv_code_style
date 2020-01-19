@@ -3,9 +3,7 @@
 RSpec.describe RuboCop::Cop::Spbtv::Postgres::AddColumnWithDefault do
   subject(:cop) { described_class.new }
 
-  before do
-    inspect_source(cop, source)
-  end
+  before { inspect_source(source) }
 
   context 'with default' do
     let(:source) { 'add_column :users, :name, :string, null: false, default: "Peter"' }

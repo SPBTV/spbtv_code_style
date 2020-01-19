@@ -46,16 +46,16 @@ module RuboCop
         #   end
         #
         class AddIndex < Cop
-          MSG = 'Do not add an index.'.freeze
+          MSG = 'Do not add an index.'
 
-          def_node_search :disable_ddl_transaction?, '(send nil :disable_ddl_transaction!)'
+          def_node_search :disable_ddl_transaction?, '(send _ :disable_ddl_transaction!)'
 
           def_node_matcher :add_index_without_options?, <<-PATTERN
-            (send nil :add_index _ _)
+            (send _ :add_index _ _)
           PATTERN
 
           def_node_matcher :add_index_with_options?, <<-PATTERN
-            (send nil :add_index _ _ (hash $...))
+            (send _ :add_index _ _ (hash $...))
           PATTERN
 
           def_node_matcher :concurrently?, <<-PATTERN
@@ -68,12 +68,10 @@ module RuboCop
 
           def on_send(node)
             if add_index_without_options?(node)
-              add_offense(node, :expression)
+              add_offense(node, location: :expression)
             elsif (options = add_index_with_options?(node))
               has_concurrently = options.detect { |pair| concurrently?(pair) }
-              unless has_concurrently && @disable_ddl_transaction
-                add_offense(node, :expression)
-              end
+              add_offense(node, location: :expression) unless has_concurrently && @disable_ddl_transaction
             end
           end
         end

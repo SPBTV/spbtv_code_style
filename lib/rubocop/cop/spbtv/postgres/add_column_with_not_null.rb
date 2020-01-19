@@ -20,10 +20,10 @@ module RuboCop
         #   add_column :users, :name, :string
         #
         class AddColumnWithNotNull < Cop
-          MSG = 'Do not add a NOT NULL column.'.freeze
+          MSG = 'Do not add a NOT NULL column.'
 
           def_node_matcher :add_not_null_column?, <<-PATTERN
-            (send nil :add_column _ _ _ (hash $...))
+            (send _ :add_column _ _ _ (hash $...))
           PATTERN
 
           def_node_matcher :null_false?, <<-PATTERN
@@ -37,7 +37,7 @@ module RuboCop
             null_false = pairs.detect { |pair| null_false?(pair) }
             return unless null_false
 
-            add_offense(null_false, :expression)
+            add_offense(null_false, location: :expression)
           end
         end
       end

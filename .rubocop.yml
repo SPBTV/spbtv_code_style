@@ -6,8 +6,8 @@ require:
   - ./lib/rubocop/cop/spbtv/postgres/find_each
   - ./lib/rubocop/cop/spbtv/multiple_validation
 
-Rails:
- Enabled: true
+# Rails:
+#  Enabled: true
 
 AllCops:
   Exclude:
@@ -40,19 +40,14 @@ Style/GuardClause:
 Style/TrivialAccessors:
   AllowPredicates: true
 
-Style/IfUnlessModifier:
-  MaxLineLength: 30
-
 Style/EmptyCaseCondition:
   Enabled: false
 
 Metrics/ClassLength:
   Severity: refactor
+  Max: 140
   Exclude:
     - '**/db/**/*'
-
-Metrics/AbcSize:
-  Severity: refactor
 
 Metrics/PerceivedComplexity:
   Severity: refactor
@@ -60,7 +55,7 @@ Metrics/PerceivedComplexity:
 Metrics/ParameterLists:
   Severity: refactor
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Metrics/AbcSize:
@@ -70,6 +65,7 @@ Metrics/AbcSize:
 
 Metrics/MethodLength:
   Severity: refactor
+  Max: 15
   Exclude:
     - '**/db/**/*'
 
@@ -79,19 +75,22 @@ Metrics/CyclomaticComplexity:
 Style/SignalException:
   EnforcedStyle: semantic
 
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
-Style/IndentArray:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
-Style/MultilineMethodCallBraceLayout:
+Layout/MultilineMethodCallBraceLayout:
   Enabled: false
 
-Style/ClosingParenthesisIndentation:
+Layout/ClosingParenthesisIndentation:
   Enabled: false
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
 Style/TrailingCommaInArguments:
@@ -121,8 +120,5 @@ Postgres/ChangeColumn:
     - '**/db/migrate/20160*'
     - '**/db/migrate/201610*'
 
-Rails/NotNullColumn:
-  Enabled: false
-
-RSpec/MultipleExpectations:
-  Max: 3
+# Rails/NotNullColumn:
+#   Enabled: false

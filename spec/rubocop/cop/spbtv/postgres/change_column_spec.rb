@@ -3,9 +3,7 @@
 RSpec.describe RuboCop::Cop::Spbtv::Postgres::ChangeColumn do
   subject(:cop) { described_class.new }
 
-  before do
-    inspect_source(cop, source)
-  end
+  before { inspect_source(source) }
 
   context 'changes column' do
     let(:msg) { 'Do not change column.' }

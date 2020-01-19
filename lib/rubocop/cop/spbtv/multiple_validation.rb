@@ -14,16 +14,14 @@ module RuboCop
       #   validates :name, presence: true
       #
       class MultipleValidation < Cop
-        MSG = 'Prefer validating one attribute at once.'.freeze
+        include RuboCop::Cop::AutocorrectLogic
+
+        MSG = 'Prefer validating one attribute at once.'
 
         def on_send(node)
           _, _, *args = *node
-          if node.command?(:validates) && args.length > 2
-            add_offense(node, :selector, MSG)
-          end
+          add_offense(node, location: :selector, message: MSG) if node.command?(:validates) && args.length > 2
         end
-
-        private
 
         def autocorrect(node)
           _receiver, method_name, *args = *node
